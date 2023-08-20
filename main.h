@@ -20,5 +20,8 @@ typedef struct CharPrint
 /* Prototypes */
 int _putchar(char c);
 int _printf(const char *format, ...);
+int printC(va_list arg);
+int printP(va_list arg __attribute__((unused)));
+int printS(va_list arg);
 
 #endif
