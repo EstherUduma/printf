@@ -33,16 +33,16 @@ int _printf(const char *format, ...)
 			{
 				if (*(format + a + 1) == *(array[b].c))
 					break;
-				if (b < sizeof(array) / sizeof(array[0]))
-				{
-					num_char += array[b].pr_Fntn(arg);
-					b++;
-				}
-				else
-				{
-					_putchar(format[a]);
-					num_char++;
-				}
+			}
+			if (b < sizeof(array) / sizeof(array[0]))
+			{
+				num_char += array[b].pr_Fntn(arg);
+				b++;
+			}
+			else
+			{
+				_putchar(format[a]);
+				num_char++;
 			}
 		}
 	}
