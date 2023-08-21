@@ -29,12 +29,12 @@ int _printf(const char *format, ...)
 		{
 			if (format[a + 1] == ' ' || format[a + 1] == '\0')
 				return (-1);
-			for (b = 0; b < sizeof(array) / sizeof(array[0]); b++)
+			for (b = 0; b < (int)(sizeof(array) / sizeof(array[0])); b++)
 			{
 				if (*(format + a + 1) == *(array[b].c))
 					break;
 			}
-			if (b < sizeof(array) / sizeof(array[0]))
+			if (b < (int)(sizeof(array) / sizeof(array[0])))
 			{
 				num_char += array[b].pr_Fntn(arg);
 				b++;
