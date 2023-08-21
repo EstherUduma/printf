@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 			if (b < (int)(sizeof(array) / sizeof(array[0])))
 			{
 				num_char += array[b].pr_Fntn(arg);
-				b++;
+				a++;
 			}
 			else
 			{
