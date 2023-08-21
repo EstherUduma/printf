@@ -47,7 +47,7 @@ int printDigit(long int b, long int d)
 
 int printUn(va_list arg)
 {
-	unsigned int b == va_arg(arg, unsigned int);
+	unsigned int b = va_arg(arg, unsigned int);
 	long int d = 0;
 
 	d = printDigitUn(b, d);

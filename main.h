@@ -24,7 +24,9 @@ int printC(va_list arg);
 int printP(va_list arg __attribute__((unused)));
 int printS(va_list arg);
 int printDec(va_list arg);
+int printDigit(long int b, long int d);
 int printUn(va_list arg);
+int printDigitUn(unsigned int b, long int d);
 int printB(va_list arg);
 
 #endif
