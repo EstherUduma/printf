@@ -8,31 +8,35 @@
 
 int printB(va_list arg)
 {
-	long int bitPosition = 1, a = 0;
-	long int b = va_arg(arg, int), c = b;
+	unsigned int b = va_arg(arg, unsigned int);
 	int d = 0;
+	unsigned int bitPosition;
+	int l_zero = 1;
 
 	if (b == 0)
 	{
 		_putchar('0');
-		return (1);
+		d++;
 	}
-
-	while (c > 0)
+	else
 	{
-		a++;
-		c >>= 1;
-	}
-	bitPosition = 1 << (a - 1);
+		bitPosition = 1 << (sizeof(unsigned int) * 8 - 1);
+		while (bitPosition)
+		{
+			if (b & bitPosition)
+			{
+			l_zero = 0;
+			_putchar('1');
+			d++;
+		}
+		else if (!l_zero)
+		{
+			_putchar('0');
+			d++;
+		}
 
-	while (a > 0)
-	{
-		if (b & bitPosition)
-			d += _putchar('1');
-		else
-			d += _putchar('0');
-		a--;
 		bitPosition >>= 1;
+	}
 	}
 	return (d);
 }
