@@ -5,11 +5,13 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
+#include <stdio.h>
 
 /**
 * struct CharPrint - Handles printing task
 * @c: format specifier
 * @pr_Fntn: function pointer
+* _printf: performing printf function
 */
 typedef struct CharPrint
 {
